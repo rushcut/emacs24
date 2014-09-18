@@ -3,6 +3,11 @@ emacs24 CHANGELOG
 
 This file is used to list changes made in each version of the emacs24 cookbook.
 
+O.3.0
+-----
+- Added CentOS 7.0 support
+- Added CentOS 6.4 support
+
 O.2.0
 -----
 - Fixed packages attribute for non debian platform

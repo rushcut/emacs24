@@ -18,20 +18,6 @@
 
 require 'spec_helper'
 
-describe file('/opt/emacs') do
-  it { should be_directory }
-  it { should be_mode 755 }
-end
-
-describe file('/opt/emacs/README') do
-  it { should be_file }
-end
-
-describe file('/opt/emacs/src/emacs') do
-  it { should be_file }
-end
-
-describe file('/usr/local/bin/emacs') do
-  it { should be_file }
-  it { should be_executable }
+describe command("emacs --version") do
+  it { should return_stdout /GNU Emacs 24/}
 end

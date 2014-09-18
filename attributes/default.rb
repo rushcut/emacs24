@@ -19,8 +19,13 @@
 default['emacs24']['build_dir'] = '/opt/emacs24'
 default['emacs24']['version'] = '24.3'
 default['emacs24']['packages'] = []
+default['emacs24']['install_method'] = 'source'
 
 case node['platform']
 when 'debian', 'ubuntu'
   default['emacs24']['packages'] = %w(libtinfo-dev)
+when 'centos'
+  if node['platform_version'].to_i >= 7.0
+    default['emacs24']['install_method'] = 'package'
+  end
 end

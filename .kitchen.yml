@@ -12,6 +12,8 @@ platforms:
     driver_config:
       box: opscode-ubuntu-12.04
       box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-ubuntu-12.04.box
+  - name: centos-6.4
+  - name: centos-7.0
 
 suites:
   - name: emacs24
